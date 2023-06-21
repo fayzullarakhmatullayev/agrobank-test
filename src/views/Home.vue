@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Hello</h1>
+    <h1>Главный экран</h1>
   </main>
 </template>
 
