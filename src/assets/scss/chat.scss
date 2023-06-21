@@ -1,0 +1,183 @@
+.chat {
+  &__wrapper {
+    display: flex;
+    height: calc(100dvh - 100px);
+  }
+  &__left {
+    max-width: 372px;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  &__right {
+    width: calc(100% - 372px);
+    position: relative;
+  }
+
+  &__input {
+    border: 2px solid $superLightGrey;
+    border-radius: 10px;
+    padding: 14px 12px 13px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $blue;
+    display: block;
+    width: 100%;
+    &::placeholder {
+      color: $darkGrey;
+    }
+  }
+  &__menu {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: calc(100dvh - 175px);
+    overflow-y: auto;
+    &--list {
+      display: flex;
+      align-items: center;
+      background: $lightGray;
+      border-radius: 10px;
+      padding: 8px;
+      gap: 12px;
+    }
+    &--img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &--top {
+      position: relative;
+      margin-bottom: 5px;
+    }
+    &--name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: $blue;
+    }
+    &--timestamp {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 9px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $blue;
+      opacity: 0.5;
+    }
+    &--text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: $blue;
+      opacity: 0.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__room {
+    overflow-y: auto;
+    height: calc(100% - 130px);
+    padding-top: 10px;
+
+    &--inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 0;
+    }
+
+    &--top {
+      padding: 9px 8px;
+      background: $lightGray;
+    }
+    &--user {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: $blue;
+      margin-bottom: 6px;
+    }
+    &--timestamp {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $blue;
+      opacity: 0.5;
+    }
+    &--day {
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $blue;
+      opacity: 0.5;
+      margin-bottom: 18px;
+    }
+    &--text {
+      max-width: 450px;
+      width: 100%;
+      padding: 8px 13px 28px;
+      position: relative;
+      color: $blue;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      margin-bottom: 8px;
+      border-radius: 16px;
+      span {
+        position: absolute;
+        bottom: 8px;
+        right: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba($color: $blue, $alpha: 0.5);
+      }
+      &.recive {
+        margin-right: auto;
+        background: $lightGray;
+      }
+      &.send {
+        margin-left: auto;
+        background: $lightBlue;
+      }
+    }
+    &--form {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 16px);
+      .chat__input {
+        padding-right: 50px;
+      }
+    }
+    &--submit {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      display: block;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
