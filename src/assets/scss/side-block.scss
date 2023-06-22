@@ -35,11 +35,15 @@
     &__menu {
       display: flex;
       flex-direction: column;
-      gap: 24px;
       &--link {
         display: flex;
         align-items: center;
         gap: 20px;
+        padding: 12px 10px;
+        border-radius: 10px;
+        &.active {
+          background: $lightBlue;
+        }
         img {
           width: 26px;
           height: 26px;

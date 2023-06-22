@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Chat from '@/views/Chat.vue'
 import Settings from '@/views/Settings.vue'
+import ChatDetail from '@/views/ChatDetail.vue'
 
 const routes = [
   {
@@ -14,7 +15,14 @@ const routes = [
   {
     path: '/chat',
     name: 'chat',
-    component: Chat
+    component: Chat,
+    children: [
+      {
+        path: '/chat/:id',
+        name: 'chat-detail',
+        component: ChatDetail
+      }
+    ]
   },
   {
     path: '/settings',

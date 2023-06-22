@@ -1,7 +1,7 @@
 <template>
   <aside class="side__block">
     <div class="profile">
-      <img src="@/assets/images/users/ivan.png" alt="ivan" class="profile__img" />
+      <img src="/images/users/ivan.png" alt="ivan" class="profile__img" />
       <p class="profile__name">Анатолий Викторович</p>
     </div>
     <nav class="nav">

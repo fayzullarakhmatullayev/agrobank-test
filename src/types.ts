@@ -1,10 +1,18 @@
-export interface INavLinks {
+export interface IChatUsers {
+  id: number
   name: string
-  route: string
-  icon: string
+  timestamp: string
+  avatar: string
+  chat: IChat[]
 }
 
-export interface IProfile {
-  pic: string
-  name: string
+interface IChat {
+  chat_id: number
+  message: string
+  timestamp: string
+  isRecieved: boolean
+}
+
+export interface IMessage extends IChat {
+  id: number
 }
